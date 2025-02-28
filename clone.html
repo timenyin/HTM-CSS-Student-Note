@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Clone</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- <script src="https://kit.fontawesome.com/37e4e6b527.js" crossorigin="anonymous"></script> -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #333;
+            padding: 10px 20px;
+            color: white;
+            position: relative;
+        }
+        .navbar-menu {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            position: relative;
+        }
+        .navbar-menu a {
+            color: white;
+            text-decoration: none;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background: white;
+            list-style: none;
+            padding: 10px;
+            top: 100%;
+            left: 0;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
+        }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+        .dropdown-menu li {
+            padding: 5px 10px;
+        }
+        .dropdown-menu a {
+            color: black;
+        }
+        .search-input {
+            padding: 5px;
+            border-radius: 5px;
+            border: none;
+        }
+        .hero {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            background: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .btn.secondary {
+            background: gray;
+        }
+        .cards {
+            padding: 20px;
+            text-align: center;
+        }
+        .card-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .card {
+            padding: 20px;
+            background: #f4f4f4;
+            width: 300px;
+            border-radius: 5px;
+            text-align: left;
+        }
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .card h3 {
+            margin: 10px 0;
+        }
+        .footer {
+            background: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .navbar-menu {
+                flex-direction: column;
+                gap: 5px;
+            }
+            .card-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">Brand</div>
+        <input type="text" placeholder="Search..." class="search-input">
+        <ul class="navbar-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li class="dropdown">
+                <a href="#">Services <i class="fas fa-caret-down"></i></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Web Design</a></li>
+                    <li><a href="#">SEO</a></li>
+                    <li><a href="#">Marketing</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>A Bootstrap 5 template for modern Harmony</h1>
+            <p>Quickly design and customize responsive mobile-first sites with Bootstrap.</p>
+            <button class="btn">Get Started</button>
+            <button class="btn secondary">Learn More</button>
+        </div>
+    </header>
+
+    <section class="cards">
+        <h2>Our Services</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="Card Image">
+                <h3>Service One</h3>
+                <p>Brief description of the service goes here.</p>
+                <button class="btn">Read More</button>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="Card Image">
+                <h3>Service Two</h3>
+                <p>Brief description of the service goes here.</p>
+                <button class="btn">Read More</button>
+            </div>
+            <div class="card">
+                <img src="https://via.placeholder.com/300" alt="Card Image">
+                <h3>Service Three</h3>
+                <p>Brief description of the service goes here.</p>
+                <button class="btn">Read More</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Copyright &copy; Your Website 2023</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
