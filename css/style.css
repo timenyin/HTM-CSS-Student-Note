@@ -35,7 +35,7 @@ body {
 .dropdown-menu {
     display: none;
     position:absolute;
-    bacckground:#ffffff;
+    background:#ffffff;
     list-style:none;
     padding:10px;
     top:100%;
@@ -123,4 +123,40 @@ body {
 
 .card h3 {
     margin: 10px 0;
+}
+
+
+
+/* footer */
+.footer {
+    margin-top: 100px;
+    background: #333;
+    color:#fff;
+    padding:10px;
+    text-align:center;
+}
+
+
+
+.social-icons a {
+    color: #fff;
+    margin:0 15px;
+    font-size:20px;
+    text-decoration: none;
+
+}
+
+/* Media Querry */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    
+    }
+
+   .navbar-brand {
+    margin-bottom: 10px;
+    margin-left:58px;
+   }
+
 }
